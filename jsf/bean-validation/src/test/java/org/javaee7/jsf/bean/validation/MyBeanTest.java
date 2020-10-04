@@ -46,9 +46,9 @@ public class MyBeanTest {
     @Deployment(testable = false)
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class).
-            addClass(MyBean.class)
-            .addAsWebResource(new File(WEBAPP_SRC, "index.xhtml"))
-            .addAsWebInfResource(new File(WEBAPP_SRC + "/WEB-INF", "web.xml"));
+                addClass(MyBean.class)
+                .addAsWebResource(new File(WEBAPP_SRC, "index.xhtml"))
+                .addAsWebInfResource(new File(WEBAPP_SRC + "/WEB-INF", "web.xml"));
     }
 
     @Before

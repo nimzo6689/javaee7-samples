@@ -1,1 +1,0 @@
-Generated file `mapping.xml` will be saved here.

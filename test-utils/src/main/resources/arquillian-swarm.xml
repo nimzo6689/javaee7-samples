@@ -4,10 +4,10 @@
     http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
 
     <!--
-      - must be in a separate file because in-container tests need to use Swarm's DaemonProtocol,
-      - but arquillian.xml sets the default protocol to "Servlet 3.0" and there's no way to override that
-      - (see https://issues.jboss.org/browse/ARQ-579)
-      -->
+    - must be in a separate file because in-container tests need to use Swarm's DaemonProtocol,
+    - but arquillian.xml sets the default protocol to "Servlet 3.0" and there's no way to override that
+    - (see https://issues.jboss.org/browse/ARQ-579)
+    -->
     <container qualifier="wildfly-swarm" default="true">
         <configuration>
             <property name="host">localhost</property>

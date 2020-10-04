@@ -1,4 +1,4 @@
-/** Copyright Payara Services Limited **/
+/** Copyright Payara Services Limited * */
 package org.javaee7.jaxrs.simple.get;
 
 import javax.ws.rs.ApplicationPath;

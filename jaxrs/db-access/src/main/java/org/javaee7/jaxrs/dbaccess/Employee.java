@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 })
 @XmlRootElement
 public class Employee implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -60,15 +61,18 @@ public class Employee implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (null == obj)
+        if (null == obj) {
             return false;
-        if (!(obj instanceof Employee))
+        }
+        if (!(obj instanceof Employee)) {
             return false;
+        }
         Employee that = (Employee) obj;
-        if (that.name.equals(this.name) && that.id == this.id)
+        if (that.name.equals(this.name) && that.id == this.id) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     @Override

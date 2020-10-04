@@ -46,6 +46,7 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class MySingletonScopedBean {
+
     public String getID() {
         return this + "";
     }

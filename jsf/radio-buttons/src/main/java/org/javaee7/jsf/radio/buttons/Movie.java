@@ -47,6 +47,7 @@ import javax.validation.constraints.Size;
  * @author Arun Gupta
  */
 public class Movie {
+
     @Id
     @NotNull
     private Integer id;

@@ -53,9 +53,9 @@ import javax.inject.Named;
 public class MovieBean implements Serializable {
 
     private static final List<Movie> list = Arrays.asList(
-        new Movie(1, "The Matrix", "Keanu Reeves"),
-        new Movie(2, "The Lord of the Rings", "Elijah Wood"),
-        new Movie(3, "The Inception", "Leonardo Dicaprio"));
+            new Movie(1, "The Matrix", "Keanu Reeves"),
+            new Movie(2, "The Lord of the Rings", "Elijah Wood"),
+            new Movie(3, "The Inception", "Leonardo Dicaprio"));
     int selected;
 
     public int getSelected() {

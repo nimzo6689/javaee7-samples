@@ -50,6 +50,7 @@ import javax.faces.view.ViewScoped;
 @ManagedBean
 @ViewScoped
 public class MyBean implements Serializable {
+
     private int value;
 
     public int getValue() {

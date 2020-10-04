@@ -52,6 +52,7 @@ import javax.servlet.http.Part;
 @Named
 @RequestScoped
 public class FileUploadBean {
+
     private Part file;
     private String text;
 

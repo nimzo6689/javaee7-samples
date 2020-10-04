@@ -42,7 +42,6 @@ package org.javaee7.cdi.interceptors;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
-import java.lang.reflect.Field;
 
 /**
  * @author Arun Gupta
@@ -51,6 +50,7 @@ import java.lang.reflect.Field;
 @Interceptor
 @MyInterceptorBinding
 public class MyInterceptor {
+
     @AroundInvoke
     public Object log(InvocationContext context) throws Exception {
         Object[] parameters = context.getParameters();

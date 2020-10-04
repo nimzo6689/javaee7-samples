@@ -49,9 +49,9 @@ import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.ext.Provider;
 
 /**
- * By default, a filter is globally bound. That means it is applied
- * to all resources and all methods within that resource.
- * 
+ * By default, a filter is globally bound. That means it is applied to all
+ * resources and all methods within that resource.
+ *
  * @author Arun Gupta
  */
 @Provider
