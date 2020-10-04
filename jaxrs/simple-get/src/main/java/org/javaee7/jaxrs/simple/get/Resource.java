@@ -1,5 +1,4 @@
-/** Copyright Payara Services Limited **/
-
+/** Copyright Payara Services Limited * */
 package org.javaee7.jaxrs.simple.get;
 
 import static javax.ws.rs.core.MediaType.TEXT_PLAIN;
@@ -21,7 +20,7 @@ public class Resource {
     @GET
     @Path("hi")
     public String hi() {
-       return "hi!";
+        return "hi!";
     }
 
 }

@@ -19,6 +19,7 @@ import java.util.List;
  * @param <T>
  */
 public class ParameterRule<T> implements MethodRule {
+
     private final List<T> params;
 
     public ParameterRule(List<T> params) {
@@ -46,7 +47,9 @@ public class ParameterRule<T> implements MethodRule {
     private Method getDeploymentMethod(Object target) throws NoSuchMethodException {
         Method[] methods = target.getClass().getDeclaredMethods();
         for (Method method : methods) {
-            if (method.getAnnotation(Deployment.class) != null) return method;
+            if (method.getAnnotation(Deployment.class) != null) {
+                return method;
+            }
         }
         throw new IllegalStateException("No method with @Deployment annotation found!");
     }
@@ -90,7 +93,9 @@ public class ParameterRule<T> implements MethodRule {
     private Field getTargetField(Object target) throws NoSuchFieldException {
         Field[] allFields = target.getClass().getDeclaredFields();
         for (Field field : allFields) {
-            if (field.getAnnotation(Parameter.class) != null) return field;
+            if (field.getAnnotation(Parameter.class) != null) {
+                return field;
+            }
         }
         throw new IllegalStateException("No field with @Parameter annotation found! Forgot to add it?");
     }
@@ -98,6 +103,7 @@ public class ParameterRule<T> implements MethodRule {
     private void ignoreStatementExecution(Statement base) {
         try {
             base.evaluate();
-        } catch (Throwable ignored) {}
+        } catch (Throwable ignored) {
+        }
     }
 }

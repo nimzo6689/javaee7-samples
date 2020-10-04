@@ -9,6 +9,7 @@ package org.javaee7.jsf.components;
  * @author arungup
  */
 public class Person {
+
     private int id;
     private String name;
 

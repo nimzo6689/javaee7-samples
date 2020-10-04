@@ -6,7 +6,7 @@
     <h:head>
         <title>File Upload</title>
         <script type="text/javascript">
-            var onload_cb = function() {
+            var onload_cb = function () {
             }
             function statusUpdate(data) {
                 var statusArea = document.getElementById("status");
@@ -33,7 +33,7 @@
             <h:commandButton value="Upload">
                 <f:ajax execute="@all" render="@all" onevent="statusUpdate"/>
             </h:commandButton><p/>
-            
+
             <h2>File Contents:</h2>
             <h:outputText value="#{fileUploadBean.text}"/>
         </h:form>

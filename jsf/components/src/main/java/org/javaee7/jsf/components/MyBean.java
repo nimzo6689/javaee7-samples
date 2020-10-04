@@ -28,9 +28,9 @@ public class MyBean {
     @PostConstruct
     public void init() {
         list = Arrays.asList(
-            new Person(1, "Penny"),
-            new Person(2, "Leonard"),
-            new Person(3, "Sheldon")).toArray(new Person[0]);
+                new Person(1, "Penny"),
+                new Person(2, "Leonard"),
+                new Person(3, "Sheldon")).toArray(new Person[0]);
     }
 
     public String getCommandLink() {

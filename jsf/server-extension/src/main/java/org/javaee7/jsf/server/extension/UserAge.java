@@ -48,6 +48,7 @@ import javax.inject.Named;
 @Named
 @ApplicationScoped
 public class UserAge {
+
     int age;
 
     public UserAge() {

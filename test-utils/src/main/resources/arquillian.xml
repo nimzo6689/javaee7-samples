@@ -4,12 +4,12 @@
     http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
 
     <defaultProtocol type="Servlet 3.0"/>
-    
-     <container qualifier="payara">
+
+    <container qualifier="payara">
         <configuration>
             <property name="domain">${payara_domain}</property>
         </configuration>
-     </container>
+    </container>
 
     <container qualifier="wildfly">
         <configuration>
@@ -24,8 +24,8 @@
             <property name="wlpHome">${libertyManagedArquillian_wlpHome}</property>
         </configuration>
     </container>
-    
-     <container qualifier="liberty-ci-managed">
+
+    <container qualifier="liberty-ci-managed">
         <configuration>
             <property name="deployType">xml</property>
             <property name="wlpHome">${arquillian.liberty.wlpHome}</property>
@@ -40,19 +40,19 @@
             <property name="target">${target}</property>
 
             <property name="wlHome">${wlHome}</property>
-            
-            <!-- weblogicJarPath should be deduced automatically, but current WLS 
-                container uses following pattern: wlHome + server/lib/weblogic.jar, which 
-                misses "wlserver". -->
+
+            <!-- weblogicJarPath should be deduced automatically, but current WLS
+            container uses following pattern: wlHome + server/lib/weblogic.jar, which
+            misses "wlserver". -->
             <property name="weblogicJarPath">${wlHome}/wlserver/server/lib/weblogic.jar</property>
-            
-            <!-- jmxClientJarPath should be deduced automatically, but current WLS 
-                container uses following pattern: wlHome + server/lib/wljmxclient.jar, which 
-                misses "wlserver". -->
+
+            <!-- jmxClientJarPath should be deduced automatically, but current WLS
+            container uses following pattern: wlHome + server/lib/wljmxclient.jar, which
+            misses "wlserver". -->
             <property name="jmxClientJarPath">${wlHome}/wlserver/server/lib/wljmxclient.jar</property>
         </configuration>
     </container>
-    
+
     <container qualifier="tomcat-remote">
         <configuration>
             <property name="jmxPort">8089</property>
@@ -71,7 +71,7 @@
             <property name="pass">manager</property>
         </configuration>
     </container>
-    
-    
+
+
 
 </arquillian>

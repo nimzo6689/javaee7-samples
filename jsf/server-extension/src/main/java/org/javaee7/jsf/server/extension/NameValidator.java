@@ -55,10 +55,11 @@ public class NameValidator implements Validator {
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         System.out.println("Got: " + value);
-        if (((String) value).length() < 3)
+        if (((String) value).length() < 3) {
             throw new ValidatorException(new FacesMessage(FacesMessage.SEVERITY_WARN,
-                "Incorrect name length",
-                "Name length must >= 3, found only " + value));
+                    "Incorrect name length",
+                    "Name length must >= 3, found only " + value));
+        }
     }
 
 }

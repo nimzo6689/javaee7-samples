@@ -46,6 +46,7 @@ import javax.inject.Named;
  */
 @Named
 public class Name {
+
     private String first;
     private String last;
 

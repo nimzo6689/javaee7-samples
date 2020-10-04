@@ -54,8 +54,8 @@ public class MyConverter implements Converter {
 
     @Override
     public Object getAsObject(FacesContext context,
-        UIComponent component,
-        String value) {
+            UIComponent component,
+            String value) {
         System.out.println("Received: " + value);
         try {
             return new UserAge(Integer.parseInt(value.trim()));
@@ -66,8 +66,8 @@ public class MyConverter implements Converter {
 
     @Override
     public String getAsString(FacesContext context,
-        UIComponent component,
-        Object value) {
+            UIComponent component,
+            Object value) {
         return String.valueOf(((UserAge) value).getAge());
     }
 }

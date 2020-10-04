@@ -52,7 +52,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author arungup
  */
-@WebServlet(urlPatterns = { "/ServerServlet" })
+@WebServlet(urlPatterns = {"/ServerServlet"})
 public class ServerServlet extends HttpServlet {
 
     @Inject
@@ -71,9 +71,8 @@ public class ServerServlet extends HttpServlet {
     MySingletonScopedBean singletonBean;
 
     /**
-     * Processes requests for both HTTP
-     * <code>GET</code> and
-     * <code>POST</code> methods.
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
      *
      * @param request servlet request
      * @param response servlet response
@@ -81,7 +80,7 @@ public class ServerServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         try (PrintWriter out = response.getWriter()) {
             out.println("<b>Request-scoped bean</b>");
             out.println("<br><br>(1): " + requestBean.getID());
@@ -96,8 +95,7 @@ public class ServerServlet extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP
-     * <code>GET</code> method.
+     * Handles the HTTP <code>GET</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -106,13 +104,12 @@ public class ServerServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
     /**
-     * Handles the HTTP
-     * <code>POST</code> method.
+     * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -121,7 +118,7 @@ public class ServerServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 

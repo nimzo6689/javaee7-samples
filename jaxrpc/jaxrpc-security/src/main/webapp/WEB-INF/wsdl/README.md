@@ -1,1 +1,0 @@
-Generated file `MyHelloService.wsdl` will be saved here.

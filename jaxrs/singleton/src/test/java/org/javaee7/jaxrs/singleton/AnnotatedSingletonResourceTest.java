@@ -28,6 +28,7 @@ import static org.junit.Assert.assertEquals;
  */
 @RunWith(Arquillian.class)
 public class AnnotatedSingletonResourceTest {
+
     @ArquillianResource
     private URL base;
 
@@ -48,10 +49,10 @@ public class AnnotatedSingletonResourceTest {
     @Deployment(testable = false)
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class)
-            .addClasses(
-                MyAnnotatedApplication.class,
-                AnnotatedSingletonResource.class)
-            .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
+                .addClasses(
+                        MyAnnotatedApplication.class,
+                        AnnotatedSingletonResource.class)
+                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
     @Test

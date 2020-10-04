@@ -27,9 +27,9 @@ public class ScopedBeanTest {
     @Deployment(testable = false)
     public static WebArchive deploy() {
         return ShrinkWrap.create(WebArchive.class)
-            .addClass(ScopedBean.class)
-            .addAsWebInfResource((new File(WEBAPP_SRC + "/WEB-INF", "web.xml")))
-            .addAsWebResource((new File(WEBAPP_SRC, "index.xhtml")));
+                .addClass(ScopedBean.class)
+                .addAsWebInfResource((new File(WEBAPP_SRC + "/WEB-INF", "web.xml")))
+                .addAsWebResource((new File(WEBAPP_SRC, "index.xhtml")));
     }
 
     @Test

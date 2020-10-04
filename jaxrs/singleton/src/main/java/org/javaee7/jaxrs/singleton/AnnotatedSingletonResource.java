@@ -58,9 +58,10 @@ import javax.ws.rs.core.MediaType;
 @Singleton
 @Path("annotated")
 public class AnnotatedSingletonResource {
+
     // Ideally this state should be stored in a database
     // But this is a singleton resource and so state can be saved here too
-    private List<String> strings;
+    private final List<String> strings;
 
     public AnnotatedSingletonResource() {
         strings = new ArrayList<>();
@@ -94,7 +95,8 @@ public class AnnotatedSingletonResource {
     @DELETE
     @Path("{content}")
     public void deleteFromList(@PathParam("content") String content) {
-        if (strings.contains(content))
+        if (strings.contains(content)) {
             strings.remove(content);
+        }
     }
 }

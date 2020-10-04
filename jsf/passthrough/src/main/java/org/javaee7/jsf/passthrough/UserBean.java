@@ -49,6 +49,7 @@ import javax.inject.Named;
 @Named
 @SessionScoped
 public class UserBean implements Serializable {
+
     private String name;
     private int age;
     private String email;

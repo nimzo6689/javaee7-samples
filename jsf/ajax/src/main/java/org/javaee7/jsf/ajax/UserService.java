@@ -50,6 +50,7 @@ import javax.inject.Named;
 @Named
 @SessionScoped
 public class UserService implements Serializable {
+
     @Inject
     User user;
 

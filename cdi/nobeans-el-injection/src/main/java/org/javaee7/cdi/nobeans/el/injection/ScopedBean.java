@@ -9,6 +9,7 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class ScopedBean {
+
     public String sayHello() {
         return "Hello there!";
     }
